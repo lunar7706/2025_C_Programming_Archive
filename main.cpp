@@ -246,3 +246,4 @@ printf(“result : %d\n”, result);
 // n = Increament(n);
 // printf(“n : %d\n”, n);
 //}
+
