@@ -1,0 +1,126 @@
+#include <stdio.h>
+
+int Sum(int a, int b) //더하기
+{
+	int c = 0;
+	c = a + b;
+	return c;
+}
+int Subtract(int a, int b) //뺴기
+{
+	int c = 0;
+	c = a - b;
+	return c;
+}
+float Multipl(float a,float b) //곱하기
+{
+	float c = 0;
+	c = a * b;
+	return c;
+}
+float Divide(float a, float b) // 나누기
+{
+	float c = 0;
+	c = a / b;
+	return c;
+}
+int Times(int a) //구구단
+{
+	for (int i = 1;i <= 9;++i) 
+	{
+		printf("%d * %d = %d\n", a, i, a * i);
+	}
+	return 0;
+}
+int Name(int a) //이름 반복
+{
+	for (int i = 0;i < a;++i) 
+	{
+		printf("홍길동\n");
+	}
+	return 0;
+}
+int StarTower(int a) //별 탑쌓기
+{
+	for (int i = 0;i <= a;++i)
+	{
+		for (int k = 0;k<i;k++)
+			printf("*");
+		printf("\n");
+	}
+	return 0;
+}
+int EvenNumber(int a) //짝수,홀수
+{
+	if (a % 2 == 0)
+		printf("%d는 짝수이다\n", a);
+	else
+		printf("%d는 홀수이다\n", a);
+	return 0;
+}
+double Circle(double r) //원의 넓이
+{
+	double circle = r * r * 3.14;
+	printf("반지름%f인 원의 넓이%f\n",r, circle);
+	return 0;
+}
+
+void Bmi(double kg, double m) //BMI계산기
+{
+	double bmi = kg / (m * m);
+	if (bmi < 18.5)
+		printf("%f: 저체중\n", bmi);
+	else if (18.5 <= bmi && bmi <= 23)
+		printf("%f: 정상 체중\n", bmi);
+	else
+		printf("%f: 과체중\n", bmi);
+}
+
+int main() 
+{
+	printf("%d\n", Sum(1, 2));
+	printf("%d\n", Subtract(1, 2));
+	printf("%p\n", Multipl(4, 2));
+	printf("%p\n", Divide(4, 2));
+	Times(2);
+	Name(3);
+	StarTower(5);
+	EvenNumber(2);
+	EvenNumber(3);
+	Circle(3);
+	Bmi(50,1.8);
+	Bmi(70,1.8);
+	Bmi(100, 1.8);
+}
+
+
+
+결과값
+3
+-1
+4020000000000000
+4000000000000000
+2 * 1 = 2
+2 * 2 = 4
+2 * 3 = 6
+2 * 4 = 8
+2 * 5 = 10
+2 * 6 = 12
+2 * 7 = 14
+2 * 8 = 16
+2 * 9 = 18
+홍길동
+홍길동
+홍길동
+
+*
+**
+***
+****
+*****
+2는 짝수이다
+3는 홀수이다
+반지름3.000000인 원의 넓이28.260000
+15.432099: 저체중
+21.604938: 정상 체중
+30.864198: 과체중
